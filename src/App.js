@@ -10,6 +10,7 @@ import AuthProbider from './context/AuthProbider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import MyOrder from './Pages/MyOrder/MyOrder';
 import AdminPage from './Pages/AdminPage/AdminPage';
+import NotFound from './Pages/Home/NotFound/NotFound';
 
 function App() {
   return (
@@ -39,7 +40,9 @@ function App() {
             <PrivateRoute exact path='/addservice'>
               <Addservice></Addservice>
             </PrivateRoute>
-
+            <Route path='*'>
+              <NotFound></NotFound>
+            </Route>
           </Switch>
         </BrowserRouter>
       </AuthProbider>
